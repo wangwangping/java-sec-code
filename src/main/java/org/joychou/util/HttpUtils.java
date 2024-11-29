@@ -32,6 +32,19 @@ import java.util.concurrent.*;
  * @author JoyChou 2020-04-06
  */
 public class HttpUtils {
+    private static final List<String> ALLOWED_URLS = Arrays.asList(
+        "http://example.com",
+        "http://another-allowed-url.com"
+    );
+
+    private static boolean isValidUrl(String url) {
+        try {
+            URI uri = new URI(url);
+            return ALLOWED_URLS.contains(uri.getScheme() + "://" + uri.getHost());
+        } catch (URISyntaxException e) {
+            return false;
+        }
+    }
 
     private final static Logger logger = LoggerFactory.getLogger(HttpUtils.class);
 
@@ -203,6 +216,9 @@ public class HttpUtils {
 
 
     public static String HttpAsyncClients(String url) {
+        if (!isValidUrl(url)) {
+            return "Invalid URL";
+        }
         CloseableHttpAsyncClient httpclient = HttpAsyncClients.createDefault();
         try {
             httpclient.start();
