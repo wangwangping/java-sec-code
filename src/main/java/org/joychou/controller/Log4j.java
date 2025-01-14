@@ -17,7 +17,7 @@ public class Log4j {
      */
     @RequestMapping(value = "/log4j")
     public String log4j(String token) {
-        logger.error(token);
+        logger.error("token: {}", token);
         return token;
     }
 
