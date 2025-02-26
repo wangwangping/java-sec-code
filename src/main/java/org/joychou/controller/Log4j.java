@@ -17,11 +17,7 @@ public class Log4j {
      */
     @RequestMapping(value = "/log4j")
     public String log4j(String token) {
-        HashMap<String, String> params = new HashMap();
-        params.put("Authoriztion", token);
-        params.put("Content-Type", "application/json");
-        params.put("param", "error/fatal/off");
-        logger.error("request params is: {}", JSON.toJSONString(params));
+        logger.error("token is: {}", NormalizerUtil.replaceCRLF(token));
         return token;
     }
 
