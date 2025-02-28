@@ -18,7 +18,7 @@ public class Log4j {
     @RequestMapping(value = "/log4j")
     public String log4j(String token, Authorization authorization) {
         execute(token, authorization);
-        logger.error("token is: " + token + "authorization is: " + JSONUtil.toJsonStr(authorization));
+        logger.error("token is: {}, authorization is: {}", token, JSONUtil.toJsonStr(authorization));
         return token;
     }
 
