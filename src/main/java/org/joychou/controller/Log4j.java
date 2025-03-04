@@ -17,7 +17,7 @@ public class Log4j {
      */
     @RequestMapping(value = "/log4j")
     public String log4j(Authorization authorization) {
-        logger.error("authorization is: {}", authorization.toString());
+        logger.error("authorization is: {}", authorization);
         return authorization.toString();
     }
 
