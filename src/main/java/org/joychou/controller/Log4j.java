@@ -16,9 +16,9 @@ public class Log4j {
      * Fix: Update log4j to lastet version.
      */
     @RequestMapping(value = "/log4j")
-    public String log4j(Authorization authorization) {
-        logger.error("authorization is: {}", authorization);
-        return authorization.toString();
+    public String log4j(String token) {
+        logger.error(token);
+        return token;
     }
 
     public static void main(String[] args) {
