@@ -17,8 +17,9 @@ public class Log4j {
      */
     @RequestMapping(value = "/log4j")
     public String log4j(String token) {
+        String result = getResponse(token);
         String privateKey = "parivate";
-        logger.info("token: {}, privateKey: {}", token, privateKey);
+        logger.info("token: {}, privateKey: {}, result: {}", token, privateKey, result);
         return token;
     }
 
@@ -26,7 +27,9 @@ public class Log4j {
         String poc = "${jndi:ldap://127.0.0.1:1389/0iun75}";
         logger.info(poc);
         String privateKey = "parivate";
-        logger.error("something went wrong, token: {}, privateKey: {}", token, privateKey);
+        if(StringUtils.isNotBlank(privateKey)) {
+            logger.error("token: {}, privateKey: {}", token, privateKey);
+        }
     }
 
 }
