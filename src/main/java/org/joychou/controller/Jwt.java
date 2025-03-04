@@ -43,6 +43,7 @@ public class Jwt {
         cookie.setPath("/");
         cookie.setSecure(true);
         response.addCookie(cookie);
+        logger.info("cookie is: {}", cookie);
         return "Add jwt token cookie successfully. Cookie name is USER_COOKIE";
     }
 
