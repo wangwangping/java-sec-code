@@ -139,7 +139,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-            <version>1.4.0.RELEASE</version>
+            <version>1.4.1.RELEASE</version>
         </dependency>
 
         <!-- 生成uuid -->
@@ -284,7 +284,7 @@
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
-            <version>1.9.4</version>
+            <version>1.11.0</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
@@ -347,7 +347,7 @@
         <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-core</artifactId>
-            <version>1.2.4</version>
+            <version>1.4.0</version>
         </dependency>
 
         <dependency>
