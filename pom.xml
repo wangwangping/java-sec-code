@@ -139,7 +139,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-            <version>1.4.0.RELEASE</version>
+            <version>4.1.6</version>
         </dependency>
 
         <!-- 生成uuid -->
@@ -153,13 +153,13 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
-            <version>4.2.12.RELEASE</version>
+            <version>6.4.9</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
-            <version>4.2.12.RELEASE</version>
+            <version>6.4.9</version>
         </dependency>
 
         <dependency>
@@ -316,7 +316,7 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-commons</artifactId>
-            <version>1.13.11.RELEASE</version>
+            <version>3.4.9</version>
         </dependency>
 
         <dependency>
